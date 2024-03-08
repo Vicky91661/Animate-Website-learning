@@ -1,0 +1,226 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height:100%
+}
+
+.main{
+    display: flex;
+    width: 100%;
+    height: 100%;
+   font-family:  Verdana, sans-serif;
+   overflow: hidden;
+    
+}
+
+.left{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(195, 50, 50);
+    position: relative;
+    overflow: hidden;
+}
+.navBar{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2vh 0vh;
+    top: 0%;
+    position: absolute;
+   animation-name: bottomMotion ;
+   animation-duration: 2s;
+   animation-fill-mode: forwards;
+   opacity: 0;
+   animation-delay: 1s;
+}
+.left .navBar{
+    color: white;
+}
+@keyframes bottomMotion{
+    0%{
+        top:-10%;
+        opacity: 0;
+    }
+    100%{
+        top: 0%;
+        opacity: 1;
+    }
+}
+.left .main-text{
+    color:white;
+    position: absolute;
+   right: 1%;
+   top:75%;
+   translate: transform(-2%,-75%);
+   text-align: end;
+   font-size: 5vh;
+   animation-name: leftMotion;
+   animation-duration: 2s;
+   animation-delay: 1s;
+   opacity: 0;
+   animation-fill-mode: forwards;
+}
+
+@keyframes leftMotion{
+    0%{
+        top:100%;
+        opacity: 0;
+    }
+    100%{
+        top:75%;
+        opacity: 1;
+    }
+}
+
+.Redcolor{
+    width: 100%;
+    height: 100%;
+    background-image:url("https://images.unsplash.com/photo-1579487685737-e435a87b2518?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    right:0%;
+    animation-name: imageAni;
+   animation-duration: 2s;
+   animation-delay: 1s;
+   opacity: 0;
+   animation-fill-mode: forwards;
+}
+
+@keyframes imageAni{
+    0%{
+        right:-70%;
+        opacity: 0;
+        transform:  rotate(4deg);
+    }
+    100%{
+        right: 0%;
+        opacity: .8;
+        translate: rotate(0deg)
+    }
+}
+.right{
+    width: 50%;
+    height:100vh;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+   
+   
+}
+
+.right .topImage{
+    width: 20%;
+    height:33%;
+    background-image: url("https://images.unsplash.com/photo-1515523110800-9415d13b84a8?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top:1%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    border-radius:5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: leftMotion2;
+    animation-duration: 2s;
+   animation-delay: 1s;
+   opacity: 0;
+   animation-fill-mode: forwards;
+}
+@keyframes leftMotion2{
+    0%{
+        left:100%;
+        opacity: 0;
+    }
+    100%{
+        left: 50%;
+        opacity: 1;
+    }
+}
+.right .middleImage{
+    width: 25%;
+    height:40%;
+    background-image: url("https://images.unsplash.com/photo-1534875689709-535c1ee9ff82?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    top: 60%;
+    left: 30%;
+    transform: translate(-30%,-60%);
+    border-radius:5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: leftMotion3;
+    animation-duration: 1.5s;
+   animation-delay: 1s;
+   opacity: 0;
+   animation-fill-mode: forwards;
+}
+@keyframes leftMotion3{
+    0%{
+        left:100%;
+        opacity: 0;
+    }
+    100%{
+        left: 30%;
+        opacity: 1;
+    }
+}
+.right .bottomImage{
+    width: 20%;
+    height:33%;
+    background-image: url("https://images.unsplash.com/photo-1576438162986-c685b1cfed7a?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    bottom: -10%;
+    left: 55%;
+    border-radius:5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: leftMotion4;
+    animation-duration: 2s;
+   animation-delay: 1s;
+   opacity: 0;
+   animation-fill-mode: forwards;
+}
+@keyframes leftMotion4{
+    0%{
+        left:100%;
+        opacity: 0;
+    }
+    100%{
+        left: 55%;
+        opacity: 1;
+    }
+}
+
+.right .text{
+    font-size: 3vh;
+    word-spacing: -1vh;
+    transform: rotate(-90deg);
+    transform-origin: right center;
+    position: absolute;
+    top:-60%;
+    left:45%;
+    z-index: 10;
+    animation-name: leftMotion5;
+    animation-duration: 2s;
+        animation-delay: 1s;
+    opacity: 0;
+        animation-fill-mode: forwards;
+}
+
+@keyframes leftMotion5{
+    0%{
+        top:-60%;
+        opacity: 0;
+    }
+    100%{
+        top: 15%;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,57 @@
+
+*,*::before,*::after{
+    box-sizing:inherit;
+    padding:0;
+    margin: 0;
+}
+
+html{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 150px;
+    font-family:'Geneva';
+    user-select: none;
+    position: relative;
+}
+h1::after{
+    content:"";
+    position: absolute;
+    width: 0%;
+    height: 10px;
+    background-color: #FF0000;
+    bottom: 0;
+    left:0;
+    border-radius: 3px;
+    
+}
+h1:hover::after{
+    animation-name: lineAni;
+    animation-duration: 2s;
+}
+
+@keyframes lineAni {
+    0%{
+        width: 0;
+        left:0
+    }
+    50%{
+        width: 100%;
+        left:0%
+    }
+    100%{
+        width: 0%;
+        left:100%
+    }
+    
+}
